@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/main.html"
+    }
+  ]
+   "routes": [
+    {
+      "src": "/main.html",
+      "dest": "/result.html"
+    }
+  ]
+}
