@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*\\.(?!html$).*)",
+      "dest": "/app.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/app.py"
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production"
+  },
+  "public": {
+    "main.html": "app.py",
+    "result.html": "app.py",
+    "static/**/*": "app.py",
+    "heart.pkl": "app.py"
+  },
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "@vercel/python"
+    }
+  }
+}
