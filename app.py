@@ -36,7 +36,7 @@ def predict():
         data = np.array([[age,sex,cp,trtbps,chol,fbs,restecg,thalach,exang,caa]])
         my_prediction = model.predict(data)
         
-        return render_template('result.html', prediction=my_prediction)
+        return render_template('result.html', prediction=my_prediction[0])
         
         
 
