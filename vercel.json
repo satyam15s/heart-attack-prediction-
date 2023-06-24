@@ -24,8 +24,8 @@
     "FLASK_ENV": "production"
   },
   "public": {
-    "main.html": "app.py",
-    "result.html": "app.py",
+    "templates/main.html": "app.py",
+    "templates/result.html": "app.py",
     "static/**/*": "app.py",
     "heart.pkl": "app.py"
   },
