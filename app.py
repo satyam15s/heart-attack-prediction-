@@ -23,17 +23,17 @@ def predict():
       
         
         cp = request.form.get('cp')
-        trtbps = int(request.form['trestbps'])
+        trtbps = int(request.form['trtbps'])
         chol = int(request.form['chol'])
         fbs = request.form.get('fbs')
         restecg = int(request.form['restecg'])
-        thalach = int(request.form['thalach'])
+        thalachh = int(request.form['thalachh'])
         exang = request.form.get('exang')
        
-        caa = int(request.form['ca'])
+        caa = int(request.form['caa'])
         
         
-        data = np.array([[age,sex,cp,trtbps,chol,fbs,restecg,thalach,exang,caa]])
+        data = np.array([[age,sex,cp,trtbps,chol,fbs,restecg,thalachh,exang,caa]])
         my_prediction = model.predict(data)
         
         return render_template('result.html', prediction=my_prediction)
